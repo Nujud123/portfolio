@@ -3,7 +3,10 @@ import nujudPic from '../assets/nujud_professional_pic.jpeg';
 
 export default function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-cyan-50 to-gray-100 pt-16">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-cyan-50 to-gray-100 pt-16"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
           <div className="mb-8">
@@ -15,7 +18,9 @@ export default function Hero() {
           </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
-             <span className="bg-gradient-to-r from-primary-600 via-cyan-500 to-accent-500 bg-clip-text text-transparent">Nujud Almaleki</span>
+            <span className="bg-gradient-to-r from-primary-600 via-cyan-500 to-accent-500 bg-clip-text text-transparent">
+              Nujud Almaleki
+            </span>
           </h1>
 
           <p className="text-xl sm:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -27,19 +32,23 @@ export default function Hero() {
           </p>
 
           <div className="flex justify-center gap-4 mb-12">
-            <a
-              href="#contact"
+            <button
+              type="button"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-8 py-3 bg-gradient-to-r from-primary-600 to-cyan-500 text-white rounded-lg font-medium hover:shadow-xl transition-all hover:scale-105 shadow-lg"
             >
               Get in Touch
-            </a>
-            <a
-              href="#projects"
+            </button>
+
+            <button
+              type="button"
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-8 py-3 bg-white text-primary-600 rounded-lg font-medium hover:bg-primary-50 transition-colors shadow-lg hover:shadow-xl border-2 border-primary-200 font-semibold"
             >
               View Work
-            </a>
+            </button>
           </div>
+
 
           <div className="flex justify-center gap-6">
             <a
@@ -47,20 +56,25 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-gradient-to-br from-primary-100 to-cyan-100 rounded-full shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
+              aria-label="GitHub"
             >
               <Github size={24} className="text-primary-600" />
             </a>
+
             <a
               href="https://linkedin.com/in/nujud-almaleki"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-gradient-to-br from-primary-100 to-cyan-100 rounded-full shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
+              aria-label="LinkedIn"
             >
               <Linkedin size={24} className="text-primary-600" />
             </a>
+
             <a
               href="mailto:nujudalmaleki@gmail.com"
               className="p-3 bg-gradient-to-br from-primary-100 to-cyan-100 rounded-full shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
+              aria-label="Email"
             >
               <Mail size={24} className="text-primary-600" />
             </a>

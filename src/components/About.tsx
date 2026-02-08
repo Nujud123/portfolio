@@ -32,12 +32,16 @@ export default function About() {
               each project not only achieves its goals but also demonstrates innovation and technical excellence.
               I thrive in collaborative environments and am committed to continuous learning and growth.
             </p>
-            <a
-              href="#contact"
+            <button
+              type="button"
+              onClick={() => {
+                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="inline-block px-8 py-3 bg-gradient-to-r from-primary-600 to-cyan-500 text-white rounded-lg font-medium hover:shadow-lg transition-all hover:scale-105"
             >
               Let’s Connect
-            </a>
+            </button>
+
           </div>
         </div>
 
