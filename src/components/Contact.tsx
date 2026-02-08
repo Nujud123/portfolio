@@ -9,11 +9,19 @@ export default function Contact() {
   });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! I will get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
-  };
+  e.preventDefault();
+
+  const subject = encodeURIComponent(`Portfolio Contact — ${formData.name}`);
+  const body = encodeURIComponent(
+    `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}\n`
+  );
+
+  window.location.href = `mailto:nujudalmaleki@gmail.com?subject=${subject}&body=${body}`;
+
+  // اختياري: تفريغ الفورم بعد فتح البريد
+  setFormData({ name: '', email: '', message: '' });
+};
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
